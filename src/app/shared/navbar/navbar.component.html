@@ -19,7 +19,10 @@
             <a class="nav-link" routerLink="SignUp">Sign up</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="SignIn">Sign in</a>
+            <a class="nav-link" routerLink="SignIn" *ngIf="!global.isLogin">Sign in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="global.isLogin" (click)="handleClick()">Sign out</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" routerLink="gallery" >gallery</a>

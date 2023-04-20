@@ -21,8 +21,11 @@ export class LoginComponent {
     if (form.valid) {
       this.global.login(this.model).subscribe(
         (res) => {
+          // console.log(res.data.token);
+          localStorage.setItem('token', res.data.token);
+          this.global.isLogin = true;
           // console.log(res);
-          if (res.status) this.router.navigateByUrl('/');
+          if (res.apiStatus) this.router.navigateByUrl('/books');
         },
         (e) => {
           // console.log(e.error.message);

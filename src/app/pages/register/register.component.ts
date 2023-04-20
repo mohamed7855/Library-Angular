@@ -34,7 +34,7 @@ export class RegisterComponent {
           if (res.status) this.router.navigateByUrl('/');
         },
         (e) => {
-          // console.log(e.error);
+          console.log(e.error);
           this.msgError = e.error.message;
         }
       );

@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class GlobalService {
   constructor(private http: HttpClient) {}
 
+  isLogin = false;
   baseUrl = 'http://localhost:3000/api/';
 
   getBooks(): Observable<any> {
