@@ -1,0 +1,13 @@
+<div class="row mt-4">
+    <div class="col-12 col-md-4" *ngFor="let book of Books ">
+        <div class="card">
+            <div class="card-body">
+                    <h5>Title: {{book.title}}</h5>
+                    <h5>Author: {{book.author}}</h5>
+                    <h5>AvailableCopies: {{book.availableCopies}}</h5>
+                    <button routerLink="/books/{{book._id}}">show Single</button>
+                
+            </div>
+        </div>
+    </div>
+</div>

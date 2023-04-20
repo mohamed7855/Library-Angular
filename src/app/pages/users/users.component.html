@@ -1,0 +1,13 @@
+<div class="row mt-4">
+    <div class="col-12 col-md-4" *ngFor="let item of users | slice : 0 : 10">
+        <div class="card">
+            <div class="card-body">
+                    <h1>{{item.author}}</h1>
+                    <h5>{{item.title}}</h5>
+                    <h5>{{item.availableCopies}}</h5>
+                    <!-- <button routerLink="/users/{{item._id}}">show Single</button> -->
+                
+            </div>
+        </div>
+    </div>
+</div>
